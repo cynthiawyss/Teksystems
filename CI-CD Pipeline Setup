@@ -1,0 +1,43 @@
+Configuration Management With Terraform
+1. Terraform
+-----------------------
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-west-1"
+}
+
+resource "aws_ec2" "TEK-systems" {
+  ami = "ami-01"
+  instance-type = "ec2"
+}
+-----------------------
+
+GitHub Actions for AWS
+----------------------------------------
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: TEK-system
+        run: npm_build
+
+      - name: Lint
+        run: Lint flake8
+
+      - name: Deploy
+        uses: appleboy/lambda-action@v1
+----------------------------------------
