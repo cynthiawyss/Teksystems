@@ -1,0 +1,59 @@
+Docker Security Best Practices
+1. Using latest version where applicable.
+2. Creating images and back ups frequently.
+3. Managing and store Container secrets or credentials.
+4. Monitoring or restricting network access. Especially over the internet.
+5. Checking for Updates frequently.
+
+Docker Security Implementation
+----------------------
+FROM node:20-alpine
+WORKDIR /app
+Run yarn install --TEK
+CMD ["npm install", "index.js"]
+----------------------
+
+
+
+Kubernetes Security Featurs
+1. IAM Access Control.
+2. Easy backup tooling and restore points.
+3. Network Policies - Egress and Ingress.
+
+Kubernetes YAML Config
+----------------------
+apiVersion: v1
+kind: NetworkPolicy
+metadata:
+name: network-policy
+namespace: default
+spec:
+podSelector:
+matchLabels:
+role: db
+
+policyTypes:
+- Ingress
+- Egress
+
+ingress:
+- from:
+- 000.00.0.0/00
+ports:
+protocol: TCP
+port: 8080
+
+egress:
+- to:
+100.0.0.0/00
+ports:
+protocol: TCP
+port: 8080
+----------------------
+
+
+
+IaaS
+Infrastructure as a Service is a tooling technolgy used to configure, deploy and manage computer resources or hardware virtually. It enables remote access and control to virtual machines and also enables replication and rapid deploymnents of images or settings. Example is Terraform, AWS, GCP, Azure.
+
+Security implication of IaaS the risks are localized and can easily spread from config file to all deployment or instances.
