@@ -1,0 +1,40 @@
+THREAT INTELLIGENCE REPORT
+A. Types of Attacks that could be used:
+1. Spyware to sniff passwords or credentials.
+2. ⁠SQL or Code injection.
+3. ⁠Data Breach or Theft.
+4. ⁠IAM control.
+
+B. How vulnerability exploited can provide access to network:
+1. Session Stealing.
+2. Bypassing restrictions or authorization.
+3. Unauthorized code execution.
+
+Preventive Measures
+1. IAM controls should be limited.
+2. The use of Muliti-factor authentication should be adopted.
+3. Regular update of applications, VM, Containers.
+4. Network Firewalls - Egress and Ingress control.
+
+
+
+INCIDNCE RESPONSE PLAN
+A. Disabling or Revoking access to all (sensitive data and actions) for all users.
+B. Monitoring user activities or history to discover usual activities or events.
+C. Updating all instances, VM and application to patch vulnerabilities.
+D. Doing a network test to determine traffic flow Incase of data breaches.
+E. Reporting network breaches when applicable.
+D. Ensure to keep and maintain backups of stored files/data, images.
+
+
+
+NETWORK SECURITY MEASURES
+1. Ensure all VM, instances and application have the lastest security updates.
+2. Test run codes for bugs and vulnerabilities before production.
+3. Ensure strict IAM control and disable users who no longer need certain access.
+4. Ensure password rotation and two or 3 factor authentication.
+
+Security technologies;
+1. Traffic Engress and Ingress Monitoring (Firewall).
+2. SSH
+3. HTTPS
