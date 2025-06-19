@@ -49,10 +49,3 @@ What I covered:
 Each file is named based on its topic. You can go through them individually. They’re written to be clear and straight to the point.
 
 ---
-
-## Notes
-
-This project was a great way to touch multiple areas of cloud security and DevOps. Let me know if anything needs clarification or if you'd like me to walk through any part of it.
-
-Thanks!
-
